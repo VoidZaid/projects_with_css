@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Ubuntu:wght@300;500;700&display=swap');
+*{
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+/* html{
+    scroll-behavior: smooth;
+} */
+body{
+    background: #022;
+}
+.container-target{
+    /* display: inline-block; */
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+.container-target a{
+    text-decoration: none;
+}
+.container-target .target{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+    width: 200px;
+    margin: 0;
+    margin-right: -20px;
+    padding: 20px;
+    background-color: teal;
+    border-radius: 5%;
+    /* border: 1px solid rgb(0, 107, 107); */
+    box-shadow: -3px 0px 10px rgb(0, 0, 0.3), -4px 0px 10px rgb(0, 0, 0.2), -5px 0px 10px rgb(0, 0, 0.1);
+    /* z-index: 1; */
+
+    /* AL VOLVER DE LA TRANSICION POR EL HOVER AL .TARGET ESTE EFECTO DE TRAMSICION SE ACTIVA Y VUELVE DE FORMA SUAVE A POSICIONARSE DE NUEVO */
+    transition: all 0.3s ease;
+}
+/* efecto de rotate */
+.container-target .target:hover{
+    margin-right: 0px;
+    transform: rotate(3deg) translateY(-20px);
+    transition: 0.3s;
+    /* z-index: 0; */
+    /* transition: ease-in-out; */
+}
+.container-target .first{
+    /* box-shadow: 0px 0px 5px 0px rgb(0, 167, 167); */
+    z-index: 0;
+}
+.container-target .second{
+    z-index: 1;
+}
+.container-target .third{
+    z-index: 2;
+}
+.container-target .fourth{
+    z-index: 3;
+}
+.container-target .target span{
+    color: white;
+    font-size: 0.7rem;
+}
+.container-target .target h3{
+    text-align: center;
+    color: rgb(0, 255, 255);
+}
+
+.user span{
+    display: block;
+    /* caja padre posicionada para centrar caja hijo - CAJA PADRE */
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.container-target .target .user img{
+    height: 30px;
+    /* position absolute se posiciona con respecto a su padre posicionado CASO NO TENGA SE POSICIONA CON RESPECTO AL BODY/HYML , SPAN es posicionado  - CAJA HIJO*/
+    position: absolute;
+    /* Con las siguientes lineas de top y left  se posiciona el elemento al medio del ancho y alto de su contenedor su lvertice TOP LEFT*/
+    top:50%;
+    left: 50%;
+    /* AHORA  QUE YA ESTA CENTRADO el punto 0.0 al medio de su contenedor CON TRANSLATE LE DECIMOS Q VUELVA A RECORRER PERO EN DIRECCION NEGATIVA UN 50% DE SU ANCHO ORIGINAL en "X", AL ESTAR YA centrado en X AL RECORRER UN -50% en "Y" LA IMAGEN SE CENTRA POR COMPLETO AL MEDIO DE SU CAJA PADRE.*/
+    transform: translateX(-50%) translateY(-50%);
+}
+.container-target .target .user a{
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+.container-target .target .user a:hover{
+    color: aqua;
+    transition: 0.8s;
+}
